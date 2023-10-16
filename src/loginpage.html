@@ -14,57 +14,186 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded shadow-md w-96 text-center">
-      <h2 class="text-2xl font-semibold mb-6">Login</h2>
-  
-      <form action="#" method="post">
-        <div class="mb-4">
-          <label for="email" class="block text-gray-600 text-sm font-medium mb-2">Email Address</label>
-          <input type="email" id="email" name="email" class="w-full border p-2 rounded focus:outline-none focus:border-blue-500">
+  <body class="bg-gray-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-green-700 p-4 shadow-sm">
+      <div class="container mx-auto flex items-center justify-between">
+        <a href="#" class="text-white text-lg font-semibold">Gungun</a>
+
+        <div class="md:flex items-center hidden">
+          <a href="#" class="text-white mr-4">Home</a>
+          <a href="#" class="text-white mr-4">About</a>
+          <a href="#" class="text-white mr-4">Services</a>
+          <a href="#" class="text-white mr-4">Contact</a>
         </div>
-  
-        <div class="mb-4">
-          <label for="password" class="block text-gray-600 text-sm font-medium mb-2">Password</label>
-          <input type="password" id="password" name="password" class="w-full border p-2 rounded focus:outline-none focus:border-blue-500">
-        </div>
-  
-        <div class="mt-4">
-          <p class="text-gray-600 text-sm">
-            <a href="url-to-reset-password" class="text-blue-500 hover:underline">Forgot your password?</a>
-          </p>
-        </div>
-  
-        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
-          Login
-        </button>
-      </form>
-  
-      <div class="mt-4">
-        <p class="text-gray-600 text-sm">Or login with:</p>
-        <div class="flex justify-center mt-2">
-          <a href="url-to-google-login" class="bg-red-500 text-white p-2 rounded mr-2 hover:bg-red-600 focus:outline-none focus:shadow-outline-red">Google</a>
-          <a href="url-to-facebook-login" class="bg-blue-500 text-white p-2 rounded mr-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">Facebook</a>
-          <a href="url-to-apple-login" class="bg-black text-white p-2 rounded hover:bg-gray-800 focus:outline-none focus:shadow-outline-gray">Apple</a>
+
+        <div class="md:hidden">
+          <button id="navbar-toggle" class="text-white">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
       </div>
-  
-      <div class="mt-4">
-        <p class="text-gray-600 text-sm">
-          Don't have an account?
-          <a href="url-to-register" class="text-blue-500 hover:underline">Register</a>
-        </p>
+    </nav>
+
+    <!-- Modal for Mobile View -->
+    <div
+      id="mobile-menu-modal"
+      class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden"
+    >
+      <div class="h-full flex items-end justify-center pb-4">
+        <div
+          class="modal-container bg-white w-full max-w-md mx-auto rounded shadow-lg overflow-hidden transform transition-all sm:my-8 sm:align-middle sm:w-full"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-headline"
+        >
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3
+                  class="text-lg leading-6 font-medium text-gray-900"
+                  id="modal-headline"
+                >
+                  Menu
+                </h3>
+                <div class="mt-2">
+                  <!-- Your menu links go here -->
+                  <a href="#" class="text-gray-500 block py-2">Home</a>
+                  <a href="#" class="text-gray-500 block py-2">About</a>
+                  <a href="#" class="text-gray-500 block py-2">Services</a>
+                  <a href="#" class="text-gray-500 block py-2">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <button
+              id="close-modal"
+              class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Page Section -->
+    <div class="container mx-auto mt-8 flex items-center justify-center">
+      <div
+        class="bg-white p-8 rounded shadow-md w-full md:w-96 text-center mx-auto"
+      >
+        <h2 class="text-2xl font-semibold mb-6 text-green-800">Login</h2>
+
+        <form action="#" method="post">
+          <div class="mb-4">
+            <label
+              for="email"
+              class="block text-gray-600 text-sm font-medium mb-2"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full border p-2 rounded focus:outline-none focus:border-green-600"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="password"
+              class="block text-gray-600 text-sm font-medium mb-2"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="w-full border p-2 rounded focus:outline-none focus:border-green-600"
+            />
+          </div>
+
+          <div class="mb-2">
+            <p class="text-gray-600 text-sm">
+              <a
+                href="url-to-reset-password"
+                class="text-green-700 hover:underline ml-2 flex justify-end"
+                >Forgot your password?</a
+              >
+            </p>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline-blue"
+          >
+            Login
+          </button>
+        </form>
+
+        <div class="mt-4">
+          <p class="text-gray-600 text-sm">Or login with:</p>
+          <div class="flex justify-center mt-2">
+            <!-- Transparent Google Button -->
+            <a
+              href="url-to-google-login"
+              class="bg-transparent border border-gray-500 text-gray-500 p-2 rounded mr-2 hover:border-gray-600 focus:outline-none focus:border-gray-600"
+            >
+              <i class="fab fa-google"></i>
+            </a>
+            <!-- Transparent Facebook Button -->
+            <a
+              href="url-to-facebook-login"
+              class="bg-transparent border border-blue-500 text-blue-500 p-2 rounded mr-2 hover:border-blue-600 focus:outline-none focus:border-blue-600"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <!-- Transparent Apple Button -->
+            <a
+              href="url-to-apple-login"
+              class="bg-transparent border border-black text-black p-2 rounded hover:border-gray-800 focus:outline-none focus:border-gray-800"
+            >
+              <i class="fab fa-apple"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-gray-600 text-sm">
+            Don't have an account?
+            <a href="url-to-register" class="text-blue-500 hover:underline"
+              >Register</a
+            >
+          </p>
+        </div>
       </div>
     </div>
 
     <script>
-      // Toggle responsive navbar links visibility
+      // Toggle mobile menu modal visibility
       document
         .getElementById("navbar-toggle")
         .addEventListener("click", function () {
-          var navbarLinks = document.getElementById("navbar-links");
-          navbarLinks.classList.toggle("hidden");
+          var modal = document.getElementById("mobile-menu-modal");
+          modal.classList.toggle("hidden");
+        });
+
+      // Close mobile menu modal when clicking outside
+      window.addEventListener("click", function (event) {
+        var modal = document.getElementById("mobile-menu-modal");
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+
+      // Close mobile menu modal
+      document
+        .getElementById("close-modal")
+        .addEventListener("click", function () {
+          var modal = document.getElementById("mobile-menu-modal");
+          modal.classList.add("hidden");
         });
     </script>
   </body>
-</head>
+</html>
