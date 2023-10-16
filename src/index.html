@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gungun</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+  </head>
+  <body>
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="text-white text-lg font-semibold">My Website</a>
+  
+          <!-- Navbar Links -->
+          <div class="hidden md:flex space-x-4">
+              <a href="#" class="text-white hover:text-gray-300">Home</a>
+              <a href="#" class="text-white hover:text-gray-300">About</a>
+              <a href="#" class="text-white hover:text-gray-300">Services</a>
+              <a href="#" class="text-white hover:text-gray-300">Contact</a>
+          </div>
+  
+          <!-- Responsive Navbar Button for Small Screens -->
+          <div class="md:hidden">
+              <button id="navbar-toggle" class="text-white focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  
+      <!-- Responsive Navbar Links for Small Screens -->
+      <div id="navbar-links" class="md:hidden hidden">
+          <a href="#" class="block text-white py-2 hover:text-gray-300">Home</a>
+          <a href="#" class="block text-white py-2 hover:text-gray-300">About</a>
+          <a href="#" class="block text-white py-2 hover:text-gray-300">Services</a>
+          <a href="#" class="block text-white py-2 hover:text-gray-300">Contact</a>
+      </div>
+  </nav>
+
+ <!-- Hero Section with Background -->
+<section class="bg-cover bg-center bg-blue-500 text-white text-center py-32">
+  <div class="container mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Selamat datang di Bes</h1>
+      <p class="text-lg mb-4">Cari tempat perjalananan yang anda ingin kunjungi</p>
+
+
+          <!-- Search Input with Icon on the Right -->
+          <div class="max-w-md mx-auto relative">
+            <input type="text" placeholder="Search..." class="w-full border-2 border-gray-300 p-2 pl-10 pr-4 rounded-md focus:outline-none focus:border-blue-500">
+            <div class="absolute top-2 right-3">
+                <i class="fas fa-search text-gray-400"></i>
+            </div>
+        </div>
+
+
+     
+    </div>
+</section>
+  
+<!-- Card Menu Section -->
+<section class="bg-gray-100 py-12">
+  <div class="container mx-auto flex flex-wrap justify-center">
+   <!-- Title -->
+   <h2 class="text-3xl font-semibold mb-8 text-center">Tujuan Favorit</h2>
+   
+      <!-- Card 1 -->
+      <div class="max-w-sm bg-white shadow-md mx-4 my-8 rounded-md overflow-hidden">
+          <img src="https://via.placeholder.com/300" alt="Menu Item 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Menu Item 1</h2>
+              <p class="text-gray-700">Description of menu item 1 goes here.</p>
+              <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Order Now</button>
+          </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="max-w-sm bg-white shadow-md mx-4 my-8 rounded-md overflow-hidden">
+          <img src="https://via.placeholder.com/300" alt="Menu Item 2" class="w-full h-48 object-cover">
+          <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Menu Item 2</h2>
+              <p class="text-gray-700">Description of menu item 2 goes here.</p>
+              <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Order Now</button>
+          </div>
+      </div>
+      <div class="max-w-sm bg-white shadow-md mx-4 my-8 rounded-md overflow-hidden">
+        <img src="https://via.placeholder.com/300" alt="Menu Item 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Menu Item 2</h2>
+            <p class="text-gray-700">Description of menu item 2 goes here.</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Order Now</button>
+        </div>
+    </div><div class="max-w-sm bg-white shadow-md mx-4 my-8 rounded-md overflow-hidden">
+      <img src="https://via.placeholder.com/300" alt="Menu Item 2" class="w-full h-48 object-cover">
+      <div class="p-4">
+          <h2 class="text-xl font-semibold mb-2">Menu Item 2</h2>
+          <p class="text-gray-700">Description of menu item 2 goes here.</p>
+          <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Order Now</button>
+      </div>
+  </div>
+      <!-- Add more cards as needed -->
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto flex justify-between items-center">
+      <!-- Company Info Section -->
+      <div>
+          <h3 class="text-lg font-semibold">Nama Perusahaan</h3>
+          <p>My Website</p>
+      </div>
+
+      <!-- Product Info Section -->
+      <div>
+          <h3 class="text-lg font-semibold">Produk</h3>
+          <ul>
+              <li><a href="#">Fitur 1</a></li>
+              <li><a href="#">Fitur 2</a></li>
+              <li><a href="#">Fitur 3</a></li>
+          </ul>
+      </div>
+
+      <!-- Support Info Section -->
+      <div>
+          <h3 class="text-lg font-semibold">Dukungan</h3>
+          <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Hubungi Kami</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+
+
+
+  <script>
+      // Toggle responsive navbar links visibility
+      document.getElementById('navbar-toggle').addEventListener('click', function() {
+          var navbarLinks = document.getElementById('navbar-links');
+          navbarLinks.classList.toggle('hidden');
+      });
+  </script>
+  </body>
+</html>
